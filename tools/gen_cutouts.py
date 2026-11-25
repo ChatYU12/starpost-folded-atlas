@@ -288,6 +288,102 @@ def build_all():
  <rect x="464" y="152" width="22" height="24" fill="#ffe18c"/>
 </g>''', seed=29))
 
+    # 20. Distant Harbor Hills & Tiny Town
+    items.append(save_svg('hills_teal', 1100, 260, f'''
+<g filter="url(#s)">
+ <path d="M0,260 L0,160 Q140,60 320,130 Q520,40 740,118 Q920,52 1100,132 L1100,260 Z" fill="#244743"/>
+ <path d="M0,260 L0,192 Q200,116 420,176 Q660,96 890,162 Q1000,130 1100,170 L1100,260 Z" fill="#2f5b55"/>
+ <rect x="770" y="150" width="44" height="52" fill="#dfd2b8"/><polygon points="762,152 792,124 822,152" fill="#8b3a34"/>
+ <rect x="784" y="168" width="14" height="16" fill="#ffe285"/>
+ <rect x="838" y="162" width="38" height="44" fill="#d6c6a8"/><polygon points="830,164 857,140 884,164" fill="#7a4c32"/>
+ <rect x="850" y="176" width="12" height="14" fill="#ffe285"/>
+ <path d="M24,205 Q210,134 420,188 Q660,114 890,174" {CREAM}/>
+</g>''', seed=30))
+
+    # 21. Harbor Dock Lamp Post
+    items.append(save_svg('dock_lamp', 200, 440, f'''
+<g filter="url(#s)">
+ <rect x="86" y="110" width="18" height="318" rx="6" fill="#3a4542"/>
+ <rect x="66" y="404" width="58" height="26" rx="8" fill="#4b5854"/>
+ <path d="M95,116 Q95,62 146,62 L146,96" fill="none" stroke="#3a4542" stroke-width="14" stroke-linecap="round"/>
+ <path d="M118,96 L174,96 L166,162 L126,162 Z" fill="#ffe48f" filter="url(#glow)" stroke="#3a4542" stroke-width="6"/>
+ <path d="M112,98 L146,72 L180,98 Z" fill="#273330"/>
+</g>''', seed=31, disp=1.5))
+
+    # 22. Foreground Reeds & Grass
+    items.append(save_svg('reeds_fg', 420, 260, f'''
+<g filter="url(#s)">
+ <path d="M40,260 Q60,140 24,52 Q84,132 76,260 Z" fill="#2c5950"/>
+ <path d="M90,260 Q116,112 104,22 Q146,120 128,260 Z" fill="#3a6e63"/>
+ <path d="M150,260 Q190,136 218,64 Q200,156 184,260 Z" fill="#274e46"/>
+ <path d="M235,260 Q260,144 252,44 Q292,138 276,260 Z" fill="#3a6e63"/>
+ <path d="M310,260 Q350,150 388,82 Q366,174 346,260 Z" fill="#2c5950"/>
+ <ellipse cx="108" cy="64" rx="11" ry="30" fill="#7a4c32"/>
+ <ellipse cx="256" cy="82" rx="11" ry="28" fill="#7a4c32"/>
+</g>''', seed=32))
+
+    # 23. Autumn Distant Hills
+    items.append(save_svg('hills_autumn', 1100, 260, f'''
+<g filter="url(#s)">
+ <path d="M0,260 L0,154 Q180,50 380,126 Q600,32 820,118 Q980,68 1100,126 L1100,260 Z" fill="#8b6538"/>
+ <path d="M0,260 L0,188 Q230,104 470,168 Q710,92 940,158 Q1030,134 1100,164 L1100,260 Z" fill="#b4833a"/>
+ <path d="M24,202 Q240,122 470,180 Q710,110 940,170" {GOLD}/>
+</g>''', seed=33))
+
+    # 24. Autumn Golden-Red Bush
+    items.append(save_svg('autumn_bush', 380, 220, f'''
+<g filter="url(#s)">
+ <circle cx="105" cy="148" r="68" fill="#c96b2b"/>
+ <circle cx="275" cy="150" r="64" fill="#d9942c"/>
+ <circle cx="190" cy="116" r="82" fill="#eab63e"/>
+ <rect x="52" y="168" width="276" height="44" rx="20" fill="#b86026"/>
+ <path d="M74,174 Q190,62 306,174" {CREAM}/>
+</g>''', seed=34))
+
+    # 25. Canyon Twilight Peaks
+    items.append(save_svg('canyon_peaks', 1100, 300, f'''
+<g filter="url(#s)">
+ <polygon points="0,300 130,96 290,224 470,74 670,210 860,64 1020,190 1100,128 1100,300" fill="#3a3352"/>
+ <polygon points="0,300 90,154 240,248 410,138 610,242 790,122 960,234 1100,176 1100,300" fill="#2d4949"/>
+ <path d="M90,168 L240,256 L410,152 L610,250 L790,136 L960,242" {CREAM}/>
+</g>''', seed=35))
+
+    # 26. Soaring Canyon Birds
+    items.append(save_svg('birds', 320, 160, f'''
+<g filter="url(#s)" fill="#f6ebd3">
+ <path d="M40,94 Q76,50 112,86 Q146,48 184,92 Q146,72 112,96 Q76,74 40,94 Z"/>
+ <path d="M168,54 Q194,24 220,48 Q246,24 274,52 Q246,40 220,56 Q194,40 168,54 Z"/>
+</g>''', seed=36, disp=1.5))
+
+    # 27. Glowing Moonflower Cluster
+    items.append(save_svg('flower_cluster', 380, 240, f'''
+<g filter="url(#s)">
+ <path d="M50,236 Q90,144 46,84 Q112,130 108,236 Z" fill="#264b4f"/>
+ <path d="M136,236 Q186,120 220,66 Q216,154 186,236 Z" fill="#315d62"/>
+ <path d="M244,236 Q290,146 336,96 Q312,170 286,236 Z" fill="#264b4f"/>
+ <g filter="url(#glow)">
+  <circle cx="96" cy="118" r="24" fill="#b7e7f7"/><circle cx="96" cy="118" r="9" fill="#fff7c4"/>
+  <circle cx="196" cy="88" r="28" fill="#d9f4ff"/><circle cx="196" cy="88" r="10" fill="#fff7c4"/>
+  <circle cx="286" cy="130" r="22" fill="#a8dff5"/><circle cx="286" cy="130" r="8" fill="#fff7c4"/>
+ </g>
+</g>''', seed=37, disp=1.5))
+
+    # 28. Glowing Star Letter
+    items.append(save_svg('star_letter', 220, 160, f'''
+<g filter="url(#glow)">
+ <rect x="26" y="28" width="168" height="106" rx="12" fill="#fff7de" stroke="#e4b95b" stroke-width="6"/>
+ <path d="M30,34 L110,88 L190,34" fill="none" stroke="#d9a336" stroke-width="5"/>
+ <polygon points="110,56 117,74 136,74 121,85 127,104 110,93 93,104 99,85 84,74 103,74" fill="#f5bd38"/>
+</g>''', seed=38, disp=1))
+
+    # 29. Shooting Star
+    items.append(save_svg('shooting_star', 420, 180, f'''
+<g filter="url(#glow)">
+ <path d="M24,132 Q170,118 336,56" fill="none" stroke="#ffe896" stroke-width="14" stroke-linecap="round" opacity=".8"/>
+ <path d="M64,140 Q190,122 336,56" fill="none" stroke="#fff9de" stroke-width="6" stroke-linecap="round"/>
+ <polygon points="348,22 360,52 392,56 367,76 375,108 348,90 321,108 329,76 304,56 336,52" fill="#fff7c4"/>
+</g>''', seed=39, disp=1))
+
     return items
 
 def rasterize(items):

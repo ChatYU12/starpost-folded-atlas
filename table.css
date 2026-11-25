@@ -118,6 +118,17 @@ dialog h2{margin:6px 0 14px;font:700 26px/1.2 "Noto Serif SC",serif;color:var(--
 .stamp-pill{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;font-size:12.5px;background:#e8dcc2;color:#7a6d59;border:1px dashed rgba(124,104,76,.45)}
 .stamp-pill.got{background:#27483f;color:#f7e3a6;border-style:solid;border-color:var(--brass)}
 
+/* Floating Fox Dialogue Bubble */
+#foxBub{position:fixed;z-index:5;transform:translate(-50%,calc(-100% - 16px));background:rgba(255,250,238,.96);color:var(--ink);border:1.5px solid var(--brass-deep);border-radius:16px;padding:7px 13px;font-size:13px;line-height:1.45;max-width:220px;box-shadow:0 8px 22px rgba(5,12,10,.3);pointer-events:none;opacity:0;transition:opacity .25s,transform .25s}
+#foxBub.on{opacity:1;transform:translate(-50%,calc(-100% - 22px))}
+#foxBub::after{content:"";position:absolute;left:50%;bottom:-8px;margin-left:-6px;border:6px solid transparent;border-top-color:var(--brass-deep);border-bottom:0}
+#foxBub b{display:block;font-size:11px;color:var(--brass-deep);margin-bottom:1px}
+.landmark::after{content:"";position:absolute;left:50%;bottom:-9px;width:1.5px;height:9px;background:rgba(247,223,155,.75)}
+
+/* Finale Certificate */
+.cert-seals{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:14px 0}
+.cert-seal{width:54px;height:54px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#346155,#1d3831);border:2px solid var(--brass);display:grid;place-items:center;font-size:22px;box-shadow:0 6px 14px rgba(10,20,16,.28)}
+
 @media(max-width:780px){
   .head{top:10px;left:10px;right:10px;gap:6px}
   .brand{padding:5px 10px 5px 7px;gap:7px}
