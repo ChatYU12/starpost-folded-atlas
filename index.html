@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#27483f">
+<title>星邮岛 · 折叠图志</title>
+<meta name="description" content="在桌面上翻开一本 3D 纸艺立体图志，陪小狐狸邮差阿橘收集五枚星光印记，把迷路的流星寄回银河。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="table.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+</head>
+<body>
+<main id="table" aria-label="星邮岛 · 折叠图志，一本可互动的 3D 立体绘本">
+  <canvas id="world" tabindex="0" role="img" aria-label="桌面上摊开的 3D 立体绘本。拖动书页翻页，或拖动下方滑块平滑浏览。"></canvas>
+  <div class="shade" aria-hidden="true"></div>
+
+  <header class="head">
+    <div class="brand">
+      <span class="imprint" aria-hidden="true">✦</span>
+      <div><b>星邮岛 · 折叠图志</b><small>THE STARPOST ATLAS</small></div>
+    </div>
+    <nav aria-label="图志工具">
+      <button id="look" class="tool-btn hide" aria-label="重置视角" title="回到正面阅读视角">↺ <span>重置视角</span></button>
+      <button id="sound" class="tool-btn icon-only" aria-pressed="true" aria-label="声音：开" title="声音：开">🔊</button>
+      <button id="mapButton" class="tool-btn" aria-haspopup="dialog">🗺 <span>全岛地图</span> <span class="badge" id="stampCount">0/5</span></button>
+    </nav>
+  </header>
+
+  <section class="chapter" id="chapterBox" aria-label="当前章节">
+    <div class="eyebrow"><span></span><b id="folio"></b></div>
+    <h1 id="heading"></h1>
+    <p id="region"></p>
+    <p id="propHint"></p>
+  </section>
+
+  <button id="landmark" class="landmark hide" type="button"><i></i><span></span></button>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <div class="bottom">
+    <div class="narration">
+      <div class="smallcap">✦ 阿橘的星邮旅程</div>
+      <p id="line"></p>
+      <button id="read" type="button" aria-haspopup="dialog">📖 阅读这一页</button>
+    </div>
+
+    <div class="transport" aria-label="翻页控制">
+      <div class="turn-label"><span id="turnHint">拖动书页翻页 · 空白处旋转桌面</span><b id="counter">01 / 05</b></div>
+      <div class="rail-row">
+        <button id="previous" class="nav-btn" aria-label="上一章">‹</button>
+        <div class="rail">
+          <div class="dots" id="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          <input id="scrub" type="range" min="0" max="4" step="0.01" value="0" aria-label="平滑翻页滑块">
+        </div>
+        <button id="next" class="nav-btn" aria-label="下一章">›</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="loading">
+    <div class="ld-in">
+      <div class="ld-star">✦</div>
+      <div>正在展开折叠图志…</div>
+      <div class="ld-bar"><div class="ld-fill" id="ldFill"></div></div>
+      <small id="ldPct">0%</small>
+    </div>
+  </div>
+</main>
+
+<dialog id="pageDialog" aria-labelledby="readTitle">
+  <div class="inside">
+    <button class="close" id="closePage" aria-label="关闭阅读页">✕</button>
+    <div class="smallcap" id="readFolio"></div>
+    <h2 id="readTitle"></h2>
+    <div class="plate"><img id="readImg" alt=""></div>
+    <div class="prose" id="readContents"></div>
+    <div class="dlg-foot">
+      <span class="smallcap" id="readStampState"></span>
+      <button class="dlg-btn" id="readNextBtn">前往下一章 ›</button>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="mapDialog" aria-labelledby="mapTitle">
+  <div class="inside">
+    <button class="close" id="closeMap" aria-label="关闭全岛地图">✕</button>
+    <div class="smallcap">FOLD-OUT MAP · 星邮岛折叠全图</div>
+    <h2 id="mapTitle">纸上的星邮群岛</h2>
+    <div id="chart"></div>
+    <div class="stamp-row" id="stamps"></div>
+  </div>
+</dialog>
+
+<script type="module" src="reader.js"></script>
+</body>
+</html>

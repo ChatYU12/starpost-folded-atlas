@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="360" viewBox="0 0 320 360">
+<defs><filter id="p" x="-6%" y="-6%" width="112%" height="112%" color-interpolation-filters="sRGB">
+<feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="27" result="w"/>
+<feDisplacementMap in="SourceGraphic" in2="w" scale="1.5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" seed="34" result="g"/>
+<feColorMatrix in="g" type="matrix" values="0 0 0 0 .18  0 0 0 0 .14  0 0 0 0 .1  0.22 0 0 0 -0.09" result="gr"/>
+<feComposite in="gr" in2="d" operator="in" result="tex"/>
+<feMerge><feMergeNode in="d"/><feMergeNode in="tex"/></feMerge>
+</filter>
+<filter id="s" x="-12%" y="-12%" width="124%" height="128%"><feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#14201c" flood-opacity=".32"/></filter>
+<filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<g filter="url(#p)">
+<g filter="url(#s)">
+ <rect x="116" y="294" width="88" height="52" rx="10" fill="#705232"/>
+ <rect x="148" y="246" width="24" height="56" fill="#c99a3a"/>
+ <g filter="url(#glow)">
+  <circle cx="160" cy="148" r="108" fill="none" stroke="#e8bd5e" stroke-width="14"/>
+  <circle cx="160" cy="148" r="74" fill="none" stroke="#f7dc84" stroke-width="8" stroke-dasharray="14 8"/>
+  <ellipse cx="160" cy="148" rx="104" ry="38" transform="rotate(-28 160 148)" fill="none" stroke="#f0c869" stroke-width="7"/>
+  <ellipse cx="160" cy="148" rx="104" ry="38" transform="rotate(28 160 148)" fill="none" stroke="#f0c869" stroke-width="7"/>
+  <polygon points="160,108 170,138 200,148 170,158 160,188 150,158 120,148 150,138" fill="#fff7cf"/>
+ </g>
+</g></g>
+</svg>

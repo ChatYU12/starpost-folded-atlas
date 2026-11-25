@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="520" viewBox="0 0 860 520">
+<defs><filter id="p" x="-6%" y="-6%" width="112%" height="112%" color-interpolation-filters="sRGB">
+<feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="19" result="w"/>
+<feDisplacementMap in="SourceGraphic" in2="w" scale="2.5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" seed="26" result="g"/>
+<feColorMatrix in="g" type="matrix" values="0 0 0 0 .18  0 0 0 0 .14  0 0 0 0 .1  0.22 0 0 0 -0.09" result="gr"/>
+<feComposite in="gr" in2="d" operator="in" result="tex"/>
+<feMerge><feMergeNode in="d"/><feMergeNode in="tex"/></feMerge>
+</filter>
+<filter id="s" x="-12%" y="-12%" width="124%" height="128%"><feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#14201c" flood-opacity=".32"/></filter>
+<filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<g filter="url(#p)">
+<g filter="url(#s)">
+ <rect x="74" y="94" width="34" height="412" rx="8" fill="#6b482e"/>
+ <rect x="218" y="94" width="34" height="412" rx="8" fill="#6b482e"/>
+ <rect x="44" y="76" width="238" height="36" rx="10" fill="#7c5436"/>
+ <rect x="760" y="210" width="28" height="270" rx="8" fill="#6b482e"/>
+ <path d="M236,194 Q510,368 774,244" fill="none" stroke="#c9a56e" stroke-width="10"/>
+ <path d="M236,274 Q510,418 774,316" fill="none" stroke="#c9a56e" stroke-width="8"/>
+ <rect x="190" y="352" width="34" height="22" rx="4" fill="#9c734b" stroke="#583c24" stroke-width="3"/><rect x="232" y="357" width="34" height="22" rx="4" fill="#9c734b" stroke="#583c24" stroke-width="3"/><rect x="274" y="363" width="34" height="22" rx="4" fill="#9c734b" stroke="#583c24" stroke-width="3"/><rect x="316" y="367" width="34" height="22" rx="4" fill="#9c734b" stroke="#583c24" stroke-width="3"/><rect x="358" y="371" width="34" height="22" rx="4" fill="#9c734b" stroke="#583c24" stroke-width="3"/><rect x="400" y="374" width="34" height="22" rx="4" fill="#9c734b" stroke="#583c24" stroke-width="3"/><rect x="442" y="375" width="34" height="22" rx="4" fill="#9c734b" stroke="#583c24" stroke-width="3"/><rect x="484" y="375" width="34" height="22" rx="4" fill="#9c734b" stroke="#583c24" stroke-width="3"/><rect x="526" y="374" width="34" height="22" rx="4" fill="#9c734b" stroke="#583c24" stroke-width="3"/><rect x="568" y="371" width="34" height="22" rx="4" fill="#9c734b" stroke="#583c24" stroke-width="3"/><rect x="610" y="367" width="34" height="22" rx="4" fill="#9c734b" stroke="#583c24" stroke-width="3"/><rect x="652" y="363" width="34" height="22" rx="4" fill="#9c734b" stroke="#583c24" stroke-width="3"/><rect x="694" y="357" width="34" height="22" rx="4" fill="#9c734b" stroke="#583c24" stroke-width="3"/><rect x="736" y="352" width="34" height="22" rx="4" fill="#9c734b" stroke="#583c24" stroke-width="3"/>
+ <circle cx="380" cy="340" r="14" fill="#ffe082" filter="url(#glow)"/>
+ <circle cx="560" cy="356" r="14" fill="#ffe082" filter="url(#glow)"/>
+ <circle cx="700" cy="316" r="14" fill="#ffe082" filter="url(#glow)"/>
+</g></g>
+</svg>

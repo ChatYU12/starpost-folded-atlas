@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="620" viewBox="0 0 680 620">
+<defs><filter id="p" x="-6%" y="-6%" width="112%" height="112%" color-interpolation-filters="sRGB">
+<feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="12" result="w"/>
+<feDisplacementMap in="SourceGraphic" in2="w" scale="2.5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" seed="19" result="g"/>
+<feColorMatrix in="g" type="matrix" values="0 0 0 0 .18  0 0 0 0 .14  0 0 0 0 .1  0.22 0 0 0 -0.09" result="gr"/>
+<feComposite in="gr" in2="d" operator="in" result="tex"/>
+<feMerge><feMergeNode in="d"/><feMergeNode in="tex"/></feMerge>
+</filter>
+<filter id="s" x="-12%" y="-12%" width="124%" height="128%"><feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#14201c" flood-opacity=".32"/></filter>
+<filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<g filter="url(#p)">
+<g filter="url(#s)">
+ <rect x="110" y="270" width="460" height="330" rx="8" fill="#efe2c8"/>
+ <rect x="110" y="510" width="460" height="90" fill="#7d593c"/>
+ <rect x="148" y="340" width="120" height="120" rx="6" fill="#ffe08a" stroke="#5b3e28" stroke-width="10"/>
+ <path d="M208,340 L208,460 M148,400 L268,400" stroke="#5b3e28" stroke-width="8"/>
+ <rect x="330" y="350" width="106" height="250" rx="8" fill="#c8a06e" stroke="#5b3e28" stroke-width="8"/>
+ <rect x="348" y="370" width="70" height="86" rx="4" fill="#ffe6a3"/>
+ <path d="M383,370 L383,456 M348,413 L418,413" stroke="#5b3e28" stroke-width="5"/>
+ <rect x="466" y="355" width="76" height="96" rx="6" fill="#ffe08a" stroke="#5b3e28" stroke-width="8"/>
+ <rect x="150" y="90" width="54" height="130" rx="4" fill="#6b4b35"/>
+ <polygon points="56,288 340,68 624,288" fill="#8b3a34"/>
+ <polygon points="88,276 340,94 592,276" fill="#9d453e"/>
+ <path d="M98,272 L340,104 L582,272" fill="none" stroke="#e4b95b" stroke-width="3.2" stroke-dasharray="8 6" stroke-linecap="round"/>
+ <rect x="234" y="214" width="212" height="62" rx="10" fill="#27483f" stroke="#e4b95b" stroke-width="5"/>
+ <text x="340" y="256" font-family="serif" font-size="34" font-weight="700" fill="#f7e3a6" text-anchor="middle" letter-spacing="4">星邮港局</text>
+</g></g>
+</svg>

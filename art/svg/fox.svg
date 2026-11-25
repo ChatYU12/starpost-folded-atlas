@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="440" viewBox="0 0 360 440">
+<defs><filter id="p" x="-6%" y="-6%" width="112%" height="112%" color-interpolation-filters="sRGB">
+<feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="11" result="w"/>
+<feDisplacementMap in="SourceGraphic" in2="w" scale="2" xChannelSelector="R" yChannelSelector="G" result="d"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" seed="18" result="g"/>
+<feColorMatrix in="g" type="matrix" values="0 0 0 0 .18  0 0 0 0 .14  0 0 0 0 .1  0.22 0 0 0 -0.09" result="gr"/>
+<feComposite in="gr" in2="d" operator="in" result="tex"/>
+<feMerge><feMergeNode in="d"/><feMergeNode in="tex"/></feMerge>
+</filter>
+<filter id="s" x="-12%" y="-12%" width="124%" height="128%"><feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#14201c" flood-opacity=".32"/></filter>
+<filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<g filter="url(#p)">
+<g filter="url(#s)">
+ <path d="M90,335 Q25,310 38,242 Q55,205 112,248 Q128,275 120,335 Z" fill="#d96b2b"/>
+ <path d="M38,242 Q52,216 80,235 Q62,258 45,274 Z" fill="#f7eed8"/>
+ <rect x="148" y="340" width="28" height="82" rx="12" fill="#5e321a"/>
+ <rect x="196" y="340" width="28" height="82" rx="12" fill="#5e321a"/>
+ <path d="M126,232 Q126,188 186,188 Q246,188 246,232 L236,356 Q186,374 136,356 Z" fill="#df7434"/>
+ <ellipse cx="186" cy="296" rx="34" ry="52" fill="#f7eed8"/>
+ <path d="M132,208 L244,292" stroke="#4f6d4a" stroke-width="14" stroke-linecap="round"/>
+ <rect x="202" y="274" width="66" height="54" rx="10" fill="#5d7e55" stroke="#2d422a" stroke-width="3"/>
+ <path d="M202,292 L235,310 L268,292" fill="none" stroke="#e4b95b" stroke-width="4"/>
+ <circle cx="235" cy="308" r="5" fill="#f7d674"/>
+ <path d="M116,204 Q186,230 252,204 L248,230 Q186,252 120,230 Z" fill="#8b3a2b"/>
+ <path d="M122,216 Q186,240 246,216" fill="none" stroke="#e4b95b" stroke-width="3.2" stroke-dasharray="8 6" stroke-linecap="round"/>
+ <polygon points="122,126 108,42 164,96" fill="#df7434"/><polygon points="126,112 118,62 152,96" fill="#4a2c20"/>
+ <polygon points="250,126 264,42 208,96" fill="#df7434"/><polygon points="246,112 254,62 220,96" fill="#4a2c20"/>
+ <ellipse cx="186" cy="144" rx="74" ry="62" fill="#e47c3c"/>
+ <path d="M114,154 Q148,186 186,186 Q224,186 258,154 Q244,202 186,204 Q128,202 114,154 Z" fill="#f7eed8"/>
+ <circle cx="158" cy="138" r="9" fill="#1e2422"/><circle cx="161" cy="135" r="3" fill="#fff"/>
+ <circle cx="214" cy="138" r="9" fill="#1e2422"/><circle cx="217" cy="135" r="3" fill="#fff"/>
+ <ellipse cx="186" cy="158" rx="11" ry="8" fill="#2b201a"/>
+ <path d="M174,170 Q186,180 198,170" fill="none" stroke="#2b201a" stroke-width="3.5" stroke-linecap="round"/>
+ <g transform="translate(262,188) rotate(-14)" filter="url(#glow)">
+  <rect x="0" y="0" width="66" height="46" rx="6" fill="#fff8df" stroke="#e4b95b" stroke-width="3"/>
+  <path d="M2,4 L33,26 L64,4" fill="none" stroke="#d49b35" stroke-width="3"/>
+  <polygon points="33,14 36,22 44,22 38,27 40,35 33,30 26,35 28,27 22,22 30,22" fill="#f0b93d"/>
+ </g>
+</g></g>
+</svg>

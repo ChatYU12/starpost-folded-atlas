@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="540" viewBox="0 0 720 540">
+<defs><filter id="p" x="-6%" y="-6%" width="112%" height="112%" color-interpolation-filters="sRGB">
+<feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="22" result="w"/>
+<feDisplacementMap in="SourceGraphic" in2="w" scale="2" xChannelSelector="R" yChannelSelector="G" result="d"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" seed="29" result="g"/>
+<feColorMatrix in="g" type="matrix" values="0 0 0 0 .18  0 0 0 0 .14  0 0 0 0 .1  0.22 0 0 0 -0.09" result="gr"/>
+<feComposite in="gr" in2="d" operator="in" result="tex"/>
+<feMerge><feMergeNode in="d"/><feMergeNode in="tex"/></feMerge>
+</filter>
+<filter id="s" x="-12%" y="-12%" width="124%" height="128%"><feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#14201c" flood-opacity=".32"/></filter>
+<filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<g filter="url(#p)">
+<g filter="url(#s)">
+ <path d="M68,516 L68,248 Q68,66 360,66 Q652,66 652,248 L652,516 Z" fill="#385b78" fill-opacity=".78" stroke="#263747" stroke-width="16"/>
+ <path d="M96,506 L96,252 Q96,94 360,94 Q624,94 624,252 L624,506 Z" fill="#639fb6" fill-opacity=".35"/>
+ <line x1="120" y1="154" x2="120" y2="516" stroke="#2c3e4f" stroke-width="10"/><line x1="216" y1="154" x2="216" y2="516" stroke="#2c3e4f" stroke-width="10"/><line x1="312" y1="154" x2="312" y2="516" stroke="#2c3e4f" stroke-width="10"/><line x1="408" y1="154" x2="408" y2="516" stroke="#2c3e4f" stroke-width="10"/><line x1="504" y1="154" x2="504" y2="516" stroke="#2c3e4f" stroke-width="10"/><line x1="600" y1="154" x2="600" y2="516" stroke="#2c3e4f" stroke-width="10"/>
+ <line x1="68" y1="254" x2="652" y2="254" stroke="#2c3e4f" stroke-width="12"/>
+ <line x1="68" y1="384" x2="652" y2="384" stroke="#2c3e4f" stroke-width="10"/>
+ <path d="M294,516 L294,352 Q294,288 360,288 Q426,288 426,352 L426,516 Z" fill="#233647" fill-opacity=".65" stroke="#e4b95b" stroke-width="6"/>
+ <circle cx="360" cy="48" r="14" fill="#e4b95b"/>
+</g></g>
+</svg>
